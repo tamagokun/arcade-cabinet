@@ -9,7 +9,15 @@ module FrontEnd
 		set :static, true
 
 		get "/" do
-			slim :index
+			file = File.open("#{settings.root}/config/MAME.xml")
+			games = []
+			db = Nokogiri::XML(file)
+			db.css("menu game").each do |game|
+				games << {
+					:name => game.attributes.first.last,
+				}
+			end
+			slim :index, :locals => {:games => games }
 		end
 
 	end

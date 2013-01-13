@@ -5,6 +5,9 @@ gem 'rake'
 gem 'sinatra'
 gem 'slim'
 
+# data
+gem 'nokogiri'
+
 # assets
 gem 'sprockets'
 gem 'sass'

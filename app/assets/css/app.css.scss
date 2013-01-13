@@ -1,0 +1,13 @@
+* { padding: 0; margin: 0; }
+
+ul {
+  position: absolute;
+
+  li {
+    height: 48px;
+    border: 1px solid black;
+    &.active {
+      background: blue;
+    }
+  }
+}
