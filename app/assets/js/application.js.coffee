@@ -1,18 +1,6 @@
 jQuery(document).ready ($) ->
 
-  $list = new infinity.ListView($("ul"), {
-    lazy: ->
-      console.log("lazy loaded...")
-  })
-
-  index = 0
-  page = 1
-  size = $("ul li").size()
-  update = ->
-    $("ul li").removeClass("active").eq(index).addClass("active")
-    offset = index * -50
-    $("ul").css top: offset + (document.documentElement.clientHeight / 2) - 25
-    window.scrollTo(0, 0)
+  wheel = new Wheel($("ul"))
 
   #$("ul li span.image").appear ->
     #$(this).replaceWith "<img src=\"#{$(this).text()}\" />"
@@ -21,14 +9,29 @@ jQuery(document).ready ($) ->
   $(window).on 'keyup', (e) -> Key.on_up(e)
   window.setInterval ->
     if Key.pressed(Key.UP)
-      index-- if index > 0
-      update()
+      wheel.index-- if wheel.index > 0
+      wheel.update()
       return
     if Key.pressed(Key.DOWN)
-      index++ if index < size
-      update()
+      wheel.index++ if wheel.index < wheel.size
+      wheel.update()
       return
   , 10
+
+
+class Wheel
+  constructor: (@ul) ->
+    @list = new infinity.ListView(@ul)
+    @index = 0
+    @page = 1
+    @size = $("li",@ul).size()
+    @height = 50
+    @update()
+
+  update: ->
+    $("li",@ul).removeClass("active").eq(@index).addClass("active")
+    window.scrollTo(0,0)
+    @ul.css top: @index * -@height + (document.documentElement.clientHeight*.5) - (@height*.5)
 
 
 class Key
