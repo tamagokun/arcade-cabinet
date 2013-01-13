@@ -3,6 +3,7 @@ source :rubygems
 # app
 gem 'rake'
 gem 'sinatra'
+gem 'slim'
 
 # assets
 gem 'sprockets'
