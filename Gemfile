@@ -7,6 +7,7 @@ gem 'slim'
 
 # data
 gem 'nokogiri'
+gem 'json'
 
 # assets
 gem 'sprockets'
