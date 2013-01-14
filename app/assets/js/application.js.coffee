@@ -36,14 +36,14 @@ class Wheel
 		@init()
 
 	init: ->
-		@add i for i in [0..@size]
+		@add i for i in [0..@size-1]
 		@update()
 
 	add: (index) ->
 		if index < 0 or index > @size
 			index = @size - index
-		name = @list[index]
-		@view.append("<li id=\"g-#{index}\"><img data-original=\"/img/wheels/#{name}.png\" /></li>")
+		html = if @list[index].image is true then "<img data-original=\"/img/wheels/#{@list[index].name}.png\" />" else @list[index].name
+		@view.append("<li id=\"g-#{index}\">#{html}</li>")
 
 	update: ->
 		$("li",@ul).removeClass("active")

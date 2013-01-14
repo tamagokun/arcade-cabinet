@@ -29,7 +29,12 @@ module FrontEnd
 			games = []
 			db = Nokogiri::XML(file)
 			db.css("menu game").each do |game|
-				games << game.attributes.first.last
+				name = game.attributes.first.last
+				games << {
+					:name => name,
+					:image => File.exist?("#{settings.public_folder}/img/wheels/#{name}.png")
+				}
+				#games << game.attributes.first.last
 			end
 			json_data games
 		end
