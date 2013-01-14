@@ -31,7 +31,7 @@ class Wheel
 		@page = 1
 		@offset = 0
 		@size = @list.length
-		@height = 50
+		@height = 75
 		@page_size = 50
 		@init()
 
@@ -49,7 +49,7 @@ class Wheel
 		$("li",@ul).removeClass("active")
 		active = $("#g-#{@index}")
 		active.addClass("active")
-		window.scrollTo(0, @index * @height - (document.documentElement.clientHeight*.5) + (@height*.5))
+		window.scrollTo(0, @index * @height - (document.documentElement.clientHeight*.5) + (@height*2))
 
 
 class Key

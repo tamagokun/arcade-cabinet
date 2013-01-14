@@ -1,4 +1,4 @@
 vendor/bundle
 .bundle
 .sass-cache
-app/public/img/wheels
+app/public/img/wheels/*.png

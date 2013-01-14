@@ -2,11 +2,22 @@
 
 ul {
 
-  li {
-    height: 48px;
-    border: 1px solid black;
-    &.active {
-      background: blue;
-    }
-  }
+	li {
+		height: 75px;
+		position: relative;
+		vertical-align: middle;
+		img {
+			max-height: 75px;
+			vertical-align: middle;
+		}
+		&.active {
+			height: 100px;
+			padding: 100px 0;
+			background: blue;
+			z-index: 99999;
+			img {
+				max-height: 500px;
+			}
+		}
+	}
 }
