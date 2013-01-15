@@ -9,7 +9,12 @@ ul {
 		position: relative;
 		vertical-align: middle;
     font-size: 60px;
+		-moz-transform-origin: left center;
+		-webkit-transform-origin: left center;
 		transform-origin: left center;
+		-moz-transition: all .05s ease-in-out;
+		-webkit-transition: all .05s ease-in-out;
+		transition: all .05s ease-in-out;
 
 		img {
 			max-height: 75px;
