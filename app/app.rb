@@ -50,7 +50,7 @@ module FrontEnd
 				# Windows
 			when RUBY_PLATFORM =~ /darwin/
 				# Mac OSX
-				`"#{settings.config[:launcher]}" -Game #{game} -FullScreen YES || open "#{settings.config[:application]}"`
+				`"#{settings.config[:launcher]}" -Game #{game} -FullScreen YES || osascript -e 'tell application "#{settings.config[:application]}" to activate'`
 			else
 				# Linux
 				# wmctrl -a Firefox
