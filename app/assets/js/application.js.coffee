@@ -67,7 +67,6 @@ class Wheel
 		index = @index
 		$("li",@ul).each ->
 			id = $(this).attr('id').split('g-').pop()
-			#$(this).css marginLeft: Math.abs(index - id) * -20
 			diff = (index - id)
 			$(this).css
 				transform: "rotate(#{diff * -4}deg)",
