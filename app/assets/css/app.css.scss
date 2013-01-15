@@ -1,12 +1,16 @@
 * { padding: 0; margin: 0; }
 
 ul {
+	margin-left: 50px;
+	list-style: none;
 
 	li {
 		height: 75px;
 		position: relative;
 		vertical-align: middle;
     font-size: 60px;
+		transform-origin: left center;
+
 		img {
 			max-height: 75px;
 			vertical-align: middle;
@@ -14,7 +18,7 @@ ul {
 		&.active {
 			height: 100px;
 			padding: 100px 0;
-			background: blue;
+			margin-bottom: 50px;
       font-size: 100px;
 			z-index: 99999;
 			img {
