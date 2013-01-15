@@ -9,6 +9,8 @@ jQuery(document).ready ($) ->
 	$(window).on 'keydown', (e) -> Key.on_down(e)
 	$(window).on 'keyup', (e) -> Key.on_up(e)
 	window.setInterval ->
+		return unless wheel
+		return if wheel.in_game
 		if Key.pressed(Key.UP)
 			wheel.index-- if wheel.index > 0
 			wheel.update()
@@ -16,6 +18,9 @@ jQuery(document).ready ($) ->
 		if Key.pressed(Key.DOWN)
 			wheel.index++ if wheel.index < wheel.size
 			wheel.update()
+			return
+		if Key.pressed(Key.ENTER)
+			wheel.run()
 			return
 	, 50
 
@@ -33,6 +38,7 @@ class Wheel
 		@size = @list.length
 		@height = 75
 		@page_size = 50
+		@in_game = false
 		@init()
 
 	init: ->
@@ -44,6 +50,15 @@ class Wheel
 			index = @size - index
 		html = if @list[index].image is true then "<img data-original=\"/img/wheels/#{@list[index].name}.png\" />" else @list[index].name
 		@view.append("<li id=\"g-#{index}\">#{html}</li>")
+
+	run: ->
+		@in_game = true
+		game = @list[@index].name
+		$.ajax '/launch',
+			type: "POST",
+			data: { game: game }
+		.done =>
+			@in_game = false
 
 	update: ->
 		$("li",@ul).removeClass("active")
@@ -58,6 +73,7 @@ class Key
 	@UP: 38
 	@RIGHT: 39
 	@DOWN: 40
+	@ENTER: 13
 	@pressed: (keyCode) ->
 		Key.pressing[keyCode]
 	@on_down: (event) ->

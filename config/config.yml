@@ -1,2 +1,3 @@
-development:
-  database: MAME.xml
+:database: MAME.xml
+:launcher: /Applications/MAME OS X.app/Contents/MacOS/MAME OS X
+:application: /Applications/Google Chrome.app

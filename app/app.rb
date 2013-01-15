@@ -8,6 +8,10 @@ module FrontEnd
 		set :views, "#{dir}/views"
 		set :static, true
 
+		configure do
+			set :config, YAML.load_file("#{settings.root}/config/config.yml")
+		end
+
 		def is_ajax_request?
 			if respond_to? :content_type
 				return true if request.xhr?
@@ -25,7 +29,7 @@ module FrontEnd
 		end
 
 		get "/list" do
-			file = File.open("#{settings.root}/config/MAME.xml")
+			file = File.open("#{settings.root}/config/#{settings.config[:database]}")
 			games = []
 			db = Nokogiri::XML(file)
 			db.css("menu game").each do |game|
@@ -34,9 +38,24 @@ module FrontEnd
 					:name => name,
 					:image => File.exist?("#{settings.public_folder}/img/wheels/#{name}.png")
 				}
-				#games << game.attributes.first.last
 			end
 			json_data games
+		end
+
+		post "/launch" do
+			game = params[:game]
+
+			case
+			when RUBY_PLATFORM =~ /cygwin|mswin|mingw|bccwin|wince|emx/
+				# Windows
+			when RUBY_PLATFORM =~ /darwin/
+				# Mac OSX
+				`"#{settings.config[:launcher]}" -Game #{game} -FullScreen YES || open "#{settings.config[:application]}"`
+			else
+				# Linux
+				# wmctrl -a Firefox
+			end
+
 		end
 
 	end
