@@ -53,7 +53,7 @@ module FrontEnd
 				`"#{settings.config[:launcher]}" -Game #{game} -FullScreen YES || osascript -e 'tell application "#{settings.config[:application]}" to activate'`
 			else
 				# Linux
-				# wmctrl -a Firefox
+				`"#{settings.config[:launcher]}" #{game} || wmctrl -a "#{settings.config[:application]}"`
 			end
 
 		end
