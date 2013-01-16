@@ -1,14 +1,25 @@
 * { padding: 0; margin: 0; }
 
+body {
+	overflow: hidden;
+	background: #333;
+	color: white;
+	font-family: Helvetica;
+}
+
 ul {
 	margin-left: 50px;
 	list-style: none;
 
 	li {
+		z-index: 2;
 		height: 75px;
 		position: relative;
 		vertical-align: middle;
-    font-size: 60px;
+		font-size: 60px;
+		font-weight: bold;
+		text-shadow: 4px 4px #121212;
+		-webkit-text-stroke: 4px black;
 		-moz-transform-origin: left center;
 		-webkit-transform-origin: left center;
 		transform-origin: left center;
@@ -24,11 +35,25 @@ ul {
 			height: 100px;
 			padding: 100px 0;
 			margin-bottom: 50px;
-      font-size: 100px;
+			font-size: 100px;
 			z-index: 99999;
 			img {
 				max-height: 500px;
 			}
 		}
 	}
+}
+
+#pointer {
+	background: url(/img/Pointer.png) no-repeat right 50%;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -10px;
+	z-index: 1;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
 }
