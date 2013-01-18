@@ -20,18 +20,18 @@ jQuery(document).ready ($) ->
       wheel.index-- if wheel.index > 0
       wheel.update()
       if repeat_timeout == 0
-        repeat_timeout = new Date().getTime() + 1500
+        repeat_timeout = new Date().getTime() + 1000
       return
     if Key.pressed(Key.DOWN)
       wheel.index++ if wheel.index < wheel.size
       wheel.update()
       if repeat_timeout == 0
-        repeat_timeout = new Date().getTime() + 1500
+        repeat_timeout = new Date().getTime() + 1000
       return
     if Key.pressed(Key.ENTER)
       wheel.run()
       return
-  , 50
+  , 75
 
 class Wheel
   constructor: (@ul, @list) ->
@@ -78,7 +78,7 @@ class Wheel
       diff = (index - id)
       $(this).css
         transform: "rotate(#{diff * -4}deg)",
-        marginLeft: Math.abs(diff) * -20
+        marginLeft: Math.abs(diff) * -15
     window.scrollTo(0, @index * @height - (document.documentElement.clientHeight*.5) + (@height*2))
 
 
