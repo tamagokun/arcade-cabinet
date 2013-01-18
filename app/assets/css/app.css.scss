@@ -2,9 +2,13 @@
 
 body {
 	overflow: hidden;
-	background: #333;
-	color: white;
 	font-family: Helvetica;
+	color: white;
+	background: #333 url(/img/Background.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 ul {
