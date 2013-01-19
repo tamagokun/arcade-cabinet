@@ -1,3 +1,6 @@
 :database: MAME.xml
+# Mac OSX
 :launcher: /Applications/MAME OS X.app/Contents/MacOS/MAME OS X
+# Ubuntu
+#:launcher: /usr/games/mame
 :application: Google Chrome
