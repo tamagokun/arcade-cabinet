@@ -11,6 +11,17 @@ body {
 	background-size: cover;
 }
 
+#title {
+	position: fixed;
+	right: 100px;
+	top: 100px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
 ul {
 	margin-left: 50px;
 	list-style: none;

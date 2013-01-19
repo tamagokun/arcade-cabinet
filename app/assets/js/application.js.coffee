@@ -47,6 +47,7 @@ class Wheel
     @height = 75
     @page_size = 50
     @in_game = false
+    @bg_timeout = 0
     @init()
 
   init: ->
@@ -56,7 +57,7 @@ class Wheel
   add: (index) ->
     if index < 0 or index > @size
       index = @size - index
-    html = if @list[index].image is true then "<img data-original=\"/img/wheels/#{@list[index].name}.png\" />" else @list[index].name
+    html = if @list[index].wheel is true then "<img data-original=\"/img/wheels/#{@list[index].name}.png\" />" else @list[index].name
     @view.append("<li id=\"g-#{index}\">#{html}</li>")
 
   run: ->
@@ -68,7 +69,18 @@ class Wheel
     .done =>
       @in_game = false
 
+  update_theme: =>
+    bg = "/img/Background.png"
+    #title = "/img/Title.png"
+    if @list[@index].theme
+      bg = "/img/themes/#{@list[@index].name}/Background.png"
+      #title = "/img/themes/#{@list[@index].name}/#{@list[@index].name}.png"
+    $("body").css backgroundImage: "url(#{bg})"
+    #$("#title").fadeOut 200, ->
+      #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)
+
   update: ->
+    window.clearTimeout @bg_timeout
     $("li",@ul).removeClass("active")
     active = $("#g-#{@index}")
     active.addClass("active")
@@ -80,6 +92,7 @@ class Wheel
         transform: "rotate(#{diff * -4}deg)",
         marginLeft: Math.abs(diff) * -15
     window.scrollTo(0, @index * @height - (document.documentElement.clientHeight*.5) + (@height*2))
+    @bg_timeout = window.setTimeout(@update_theme, 250)
 
 
 class Key

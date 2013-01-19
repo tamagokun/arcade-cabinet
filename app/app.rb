@@ -2,7 +2,7 @@ module FrontEnd
 	class App < Sinatra::Base
 
 		enable :method_override
-		dir = File.dirname(File.expand_path(__FILE__))	
+		dir = File.dirname(File.expand_path(__FILE__))
 		set :root, File.expand_path(File.dirname(dir))
 		set :public_folder, "#{dir}/public"
 		set :views, "#{dir}/views"
@@ -24,6 +24,14 @@ module FrontEnd
 			data.to_json
 		end
 
+		def existing_assets(game)
+			img_dir = "#{settings.public_folder}/img"
+			{
+				:wheel => File.exist?("#{img_dir}/wheels/#{game}.png"),
+				:theme => Dir.exist?("#{img_dir}/themes/#{game}")
+			}
+		end
+
 		get "/" do
 			slim :index
 		end
@@ -34,10 +42,7 @@ module FrontEnd
 			db = Nokogiri::XML(file)
 			db.css("menu game").each do |game|
 				name = game.attributes.first.last
-				games << {
-					:name => name,
-					:image => File.exist?("#{settings.public_folder}/img/wheels/#{name}.png")
-				}
+				games << existing_assets(name).merge({:name => name})
 			end
 			json_data games
 		end
