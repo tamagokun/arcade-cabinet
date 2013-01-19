@@ -70,11 +70,7 @@ class Wheel
       @in_game = false
 
   update_theme: =>
-    bg = "/img/Background.png"
-    #title = "/img/Title.png"
-    if @list[@index].theme
-      bg = "/img/themes/#{@list[@index].name}/Background.png"
-      #title = "/img/themes/#{@list[@index].name}/#{@list[@index].name}.png"
+    bg = if @list[@index].background then "/img/themes/#{@list[@index].name}/Background.png" else "/img/Background.png"
     $("body").css backgroundImage: "url(#{bg})"
     #$("#title").fadeOut 200, ->
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)

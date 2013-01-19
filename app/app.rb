@@ -27,8 +27,9 @@ module FrontEnd
 		def existing_assets(game)
 			img_dir = "#{settings.public_folder}/img"
 			{
-				:wheel => File.exist?("#{img_dir}/wheels/#{game}.png"),
-				:theme => Dir.exist?("#{img_dir}/themes/#{game}")
+				:wheel => File.exist?("#{img_dir}/themes/#{game}/#{game}.png"),
+				:background => File.exist?("#{img_dir}/themes/#{game}/Background.png"),
+				:artwork => File.exist?("#{img_dir}/themes/#{game}/Theme.xml")
 			}
 		end
 
