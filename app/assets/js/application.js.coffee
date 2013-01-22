@@ -57,7 +57,7 @@ class Wheel
   add: (index) ->
     if index < 0 or index > @size
       index = @size - index
-    html = if @list[index].wheel is true then "<img data-original=\"/img/wheels/#{@list[index].name}.png\" />" else @list[index].name
+    html = if @list[index].wheel is true then "<img data-original=\"/themes/#{@list[index].name}/#{@list[index].name}.png\" />" else @list[index].name
     @view.append("<li id=\"g-#{index}\">#{html}</li>")
 
   run: ->
@@ -70,7 +70,7 @@ class Wheel
       @in_game = false
 
   update_theme: =>
-    bg = if @list[@index].background then "/img/themes/#{@list[@index].name}/Background.png" else "/img/Background.png"
+    bg = if @list[@index].background then "/themes/#{@list[@index].name}/Background.png" else "/img/Background.png"
     $("body").css backgroundImage: "url(#{bg})"
     #$("#title").fadeOut 200, ->
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)

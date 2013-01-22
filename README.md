@@ -6,7 +6,7 @@ Frontend for my arcade cabinet
 Getting Started
 ---------------
 
- * Fill `app/public/img/wheels` with game wheel images.
+ * Fill `app/public/themes` with game themes and wheel images.
  * `bundle install`
  * `foreman start`
  * Browse to `http://localhost:9393`
