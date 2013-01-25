@@ -26,11 +26,21 @@ module FrontEnd
 
 		def existing_assets(game)
 			theme_dir = "#{settings.public_folder}/themes/#{game}"
-			{
+			assets = {
 				:wheel => File.exist?("#{theme_dir}/#{game}.png"),
 				:background => File.exist?("#{theme_dir}/Background.png"),
-				:artwork => File.exist?("#{theme_dir}/Theme.xml")
+				:artwork => File.exist?("#{theme_dir}/Theme.xml"),
+				:animations => Hash.new
 			}
+			if settings.config[:animations] && assets[:artwork]
+				animations = Nokogiri::XML(File.open("#{theme_dir}/Theme.xml"))
+				animations.css("Theme").children.each do |artwork|
+					if artwork.name =~ /artwork/
+						assets[:animations][artwork.name] = Hash[artwork.attributes.to_hash.map{ |k,v| [k, v.value]}]
+					end
+				end
+			end
+			assets
 		end
 
 		get "/" do

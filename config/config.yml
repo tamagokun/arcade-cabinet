@@ -4,3 +4,4 @@
 # Ubuntu
 #:launcher: /usr/games/mame
 :application: Google Chrome
+:animations: true
