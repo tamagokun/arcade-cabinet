@@ -16,7 +16,4 @@ gem 'coffee-script'
 
 # running
 gem 'foreman'
-
-group :development do
-	gem 'shotgun'
-end
+gem 'thin'

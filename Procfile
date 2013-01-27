@@ -1,1 +1,1 @@
-web: shotgun
+web: thin -e production start
