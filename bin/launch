@@ -1,10 +1,12 @@
 #!/bin/sh
 # Starts the server and launches the front end.
 
+trap 'echo HyperMike, goodbye!; kill $pid; exit' SIGINT SIGTERM
 echo "\033[0;32m>> Starting HyperMike\033[0m"
-git fetch origin --prune
-git reset --hard origin/master
-bundle install
+# Force HyperMike to update
+# git fetch origin --prune
+# git reset --hard origin/master
+# bundle install
 bundle exec thin start -e production &
 pid="$!"
 sleep 3
@@ -23,5 +25,4 @@ case $(uname -s) in
 esac
 
 echo "\033[0;32m>> HyperMike started, CTRL+C to stop\033[0m"
-trap 'echo HyperMike, goodbye!; kill $pid; exit ' SIGINT SIGTERM
 wait
