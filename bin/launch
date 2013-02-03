@@ -5,7 +5,7 @@ echo "\033[0;32m>> Starting HyperMike\033[0m"
 git fetch origin --prune
 git reset --hard origin/master
 bundle install
-bundle exec thin start &
+bundle exec thin start -e production &
 pid="$!"
 sleep 3
 
