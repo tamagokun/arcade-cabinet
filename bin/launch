@@ -1,7 +1,22 @@
 #!/bin/sh
 # Starts the server and launches the front end.
 
-google-chrome --app=http://localhost:3000 &
+git fetch origin --prune
+git reset --hard origin/master
+bundle exec foreman start &
 sleep 3
-xdotool key F11
-bundle exec foreman start
+
+case $(uname -s) in
+	"Linux")
+		google-chrome --app=http://localhost:3000 &
+		sleep 3
+		xdotool key F11
+		;;
+	"Darwin")
+		open -a "Google Chrome" --args --app=http://localhost:3000 &
+		# TODO:
+		# go full screen
+		;;
+esac
+
+fg %1
