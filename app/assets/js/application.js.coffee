@@ -60,7 +60,7 @@ class Wheel
 	add: (index, padded=false) ->
 		if index < 0 or index > @size
 			index = @size - index
-		html = if @list[index].wheel is true then "<img data-original=\"/themes/#{@list[index].name}/#{@list[index].name}.png\" />" else @list[index].name
+		html = if @list[index].wheel is true then "<img data-original=\"/themes/#{@list[index].name}/#{@list[index].name}.png\" />" else @list[index].description
 		id = if padded then "pad-#{index}" else "g-#{index}"
 		@view.append("<li id=\"#{id}\">#{html}</li>")
 

@@ -52,8 +52,9 @@ module FrontEnd
 			games = []
 			db = Nokogiri::XML(file)
 			db.css("menu game").each do |game|
-				name = game.attributes.first.last
-				games << existing_assets(name).merge({:name => name})
+				name = game['name']
+				description = game.children.at_css("description").text
+				games << existing_assets(name).merge({:name => name, :description => description})
 			end
 			json_data games
 		end
