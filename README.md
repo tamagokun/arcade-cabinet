@@ -27,3 +27,8 @@ dkong/
 ---Background.png  # Background
 ---Theme.xml       # Animation configuration
 ```
+
+Launching
+---------
+
+`bin/launch` will get you up and running. Set this to start on boot for extra awesomness.
