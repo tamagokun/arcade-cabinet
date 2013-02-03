@@ -28,7 +28,7 @@ jQuery(document).ready ($) ->
 			if repeat_timeout == 0
 				repeat_timeout = new Date().getTime() + 1000
 			return
-		if Key.pressed(Key.ENTER)
+		if Key.pressed(Key.ENTER) || Key.pressed(Key.P1START) || Key.pressed(Key.P2START)
 			wheel.run()
 			return
 	, 75
@@ -102,6 +102,8 @@ class Key
 	@RIGHT: 39
 	@DOWN: 40
 	@ENTER: 13
+	@P1START: 49
+	@P2START: 50
 	@pressed: (keyCode) ->
 		Key.pressing[keyCode]
 	@on_down: (event) ->
