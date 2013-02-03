@@ -1,10 +1,12 @@
 #!/bin/sh
 # Starts the server and launches the front end.
 
+echo '>> Starting HyperMike'
 git fetch origin --prune
 git reset --hard origin/master
 bundle install
-bundle exec foreman start &
+bundle exec thin start &
+pid="$!"
 sleep 3
 
 case $(uname -s) in
@@ -20,4 +22,5 @@ case $(uname -s) in
 		;;
 esac
 
-fg %1
+trap 'echo HyperMike, goodbye!; kill $pid; exit ' SIGINT SIGTERM
+wait
