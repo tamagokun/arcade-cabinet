@@ -1,0 +1,7 @@
+#!/bin/sh
+# Starts the server and launches the front end.
+
+google-chrome --app=http://localhost:3000 &
+sleep 3
+xdotool key F11
+bundle exec foreman start
