@@ -6,16 +6,17 @@ Frontend for my arcade cabinet
 Getting Started
 ---------------
 
- * Fill `app/public/themes` with game themes and wheel images.
- * `bundle install`
- * `foreman start`
- * Browse to `http://localhost:3000`
+ * Fill `app/assets/themes` with game themes and wheel images.
+ * `npm install`
+ * `npm run compiler`
+ * `cd _public && npm install`
+ * `npm run app`
 
 Configuration
 -------------
 
-I've included the entire MAME game database inside of `config/MAME-full.xml`.
-Remove games that you don't want showing up and save to `config/MAME.xml`.
+I've included the entire MAME game database inside of `app/assets/config/MAME-full.xml`.
+Remove games that you don't want showing up and save to `app/assets/config/MAME.xml`.
 
 ### Themes
 
@@ -31,4 +32,4 @@ dkong/
 Launching
 ---------
 
-`bin/launch` will get you up and running. Set this to start on boot for extra awesomness.
+Compile with `npm run deploy` to get some bins

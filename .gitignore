@@ -1,4 +1,11 @@
-vendor/bundle
-.bundle
-.sass-cache
-app/public/themes/*
+nbproject
+manifest.mf
+build.xml
+bower_components/
+node_modules
+node_modules/*
+npm-debug.log
+dist
+dist/*
+_public
+app/assets/themes/*

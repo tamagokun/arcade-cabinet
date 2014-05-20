@@ -1,0 +1,33 @@
+{
+  "author": "Mike Kruk",
+  "name": "acrade-cabinet",
+  "description": "Frontend for my arcade cabinet.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamagokun/arcade-cabinet"
+  },
+  "scripts": {
+    "compiler": "brunch watch -P",
+    "app": "nodewebkit _public",
+    "deploy": "grunt"
+  },
+  "dependencies": {
+    "jade": "~0.33",
+    "coffee-script": "~1.6",
+    "brunch": "~1.7",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "coffee-script-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "stylus-brunch": ">= 1.0 < 1.8",
+    "jaded-brunch": "*",
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "bower": "~1.0",
+    "grunt": "~0.4.2",
+    "grunt-node-webkit-builder": "~0.1.14",
+    "nodewebkit": "~0.8.4-2",
+    "grunt-cli": "~0.1.11"
+  }
+}
