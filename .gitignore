@@ -9,3 +9,4 @@ dist
 dist/*
 _public
 app/assets/themes/*
+!app/assets/themes/README.md
