@@ -12,7 +12,7 @@ $ bower install
 $ npm run compiler
 # Ctrl-C once assets have been compiled
 $ (cd _public && npm install)
-# Configure config.yml before running! See [Configuration](#Configuration)
+# Configure config.yml before running! See Configuration
 $ npm run app
 ```
 
