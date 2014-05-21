@@ -83,6 +83,7 @@ class App
     $("#exit-dialog").on "click", ".yes", (e)->
       e.preventDefault()
       gui.App.quit()
+      # TODO: Shutdown computer if configured as such
 
     $("#exit-dialog").on "click", ".no", (e) =>
       e.preventDefault()
