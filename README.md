@@ -1,9 +1,17 @@
 HyperMike
 ==============
 
-Frontend for my arcade cabinet
+Frontend for my arcade cabinet. Built with node-webkit.
 
 ![Screenshot](screenshot.png)
+
+[Hyperspin](http://hyperspin-fe.com/) is glorious to behold. Though, if you are anything like me, you cringe that it only works on Windows and requires a beefy CPU since it runs inside Flash. This is not ideal when all I want is to play Donkey Kong on my arcade cabinet.
+
+Requirements
+------------
+
+* Builds for Mac, Windows, and Linux
+* Need to have MAME installed and set up with games
 
 Getting Started
 ---------------
@@ -46,3 +54,11 @@ Building
 $ npm run deploy
 ```
 Look for the release in `dist/releases`
+
+Things that would be cool
+-------------
+
+* Add support for animated backgrounds
+* Add support for game previews/videos
+* Instructions at bottom of screen
+* Intro Video?
