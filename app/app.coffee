@@ -30,21 +30,39 @@ jQuery(document).ready ($) ->
     return unless wheel
     return if wheel.in_game
     return if new Date().getTime() < repeat_timeout
-    if Key.pressed(Key.UP)
-      wheel.index = if wheel.index == 0 then wheel.size - 1 else wheel.index - 1
-      wheel.update()
-      if repeat_timeout == 0
-        repeat_timeout = new Date().getTime() + 1000
-      return
-    if Key.pressed(Key.DOWN)
-      wheel.index = if wheel.index == wheel.size - 1 then 0 else wheel.index + 1
-      wheel.update()
-      if repeat_timeout == 0
-        repeat_timeout = new Date().getTime() + 1000
-      return
-    if Key.pressed(Key.ENTER) || Key.pressed(Key.P1START) || Key.pressed(Key.P2START)
-      wheel.run()
-      return
+    # Exit dialog controls
+    if app.context == "exit_dialog"
+      if Key.pressed(Key.LEFT) || Key.pressed(Key.RIGHT) || Key.pressed(Key.UP) || Key.pressed(Key.DOWN)
+        $("#exit-dialog .active").removeClass("active").siblings("a").addClass("active")
+        if repeat_timeout == 0
+          repeat_timeout = new Date().getTime() + 1000
+        return
+      if Key.pressed(Key.ENTER) || Key.pressed(Key.P1START) || Key.pressed(Key.P2START)
+        $("#exit-dialog .active").click()
+        if repeat_timeout == 0
+          repeat_timeout = new Date().getTime() + 1000
+        return
+
+    # Wheel context controls
+    if app.context == "wheel"
+      if Key.pressed(Key.UP)
+        wheel.index = if wheel.index == 0 then wheel.size - 1 else wheel.index - 1
+        wheel.update()
+        if repeat_timeout == 0
+          repeat_timeout = new Date().getTime() + 1000
+        return
+      if Key.pressed(Key.DOWN)
+        wheel.index = if wheel.index == wheel.size - 1 then 0 else wheel.index + 1
+        wheel.update()
+        if repeat_timeout == 0
+          repeat_timeout = new Date().getTime() + 1000
+        return
+      if Key.pressed(Key.ENTER) || Key.pressed(Key.P1START) || Key.pressed(Key.P2START)
+        wheel.run()
+        return
+      if Key.pressed(Key.ESCAPE)
+        app.exit_dialog()
+        return
   , 75
 
 class App
@@ -56,11 +74,35 @@ class App
     @config = yaml.safeLoad(fs.readFileSync("config/config.yml", "utf8"))
     @load_known_games()
 
+    # set initial app context
+    @context = "wheel"
+
+    @events()
+
+  events: ->
+    $("#exit-dialog").on "click", ".yes", (e)->
+      e.preventDefault()
+      gui.App.quit()
+
+    $("#exit-dialog").on "click", ".no", (e) =>
+      e.preventDefault()
+      @exit_dialog()
+
   load_known_games: ->
     @games = []
     parseString fs.readFileSync("config/#{@config.database}", "utf8"), (err, res) =>
       _.each res.menu.game, (game_data) =>
         @games.push new Game(game_data)
+
+  exit_dialog: ->
+    modal = $("#exit-dialog")
+    modal.toggleClass "hidden"
+    modal.find(".yes").addClass("active")
+    modal.find(".no").removeClass("active")
+    @context = if modal.is(":visible")
+      "exit_dialog"
+    else
+      "wheel"
 
 
 class Game
@@ -74,7 +116,7 @@ class Game
     false
 
   locate_assets: ->
-    dir = "assets/themes/#{@name}"
+    dir = "themes/#{@name}"
     @wheel = @path_if_exists "#{dir}/#{@game}.png"
     @background = @path_if_exists "#{dir}/Background.png"
     @artwork = @path_if_exists "#{dir}/Theme.xml"
@@ -177,6 +219,7 @@ class Key
   @ENTER: 13
   @P1START: 49
   @P2START: 50
+  @ESCAPE: 27
   @pressed: (keyCode) ->
     Key.pressing[keyCode]
   @on_down: (event) ->
