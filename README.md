@@ -8,6 +8,7 @@ Getting Started
 
 ```bash
 $ npm install
+$ bower install
 $ npm run compiler
 # Ctrl-C once assets have been compiled
 $ (cd _public && npm install)
