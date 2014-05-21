@@ -47,14 +47,12 @@ jQuery(document).ready ($) ->
     # Wheel context controls
     if app.context == "wheel"
       if Key.pressed(Key.UP)
-        wheel.index = if wheel.index == 0 then wheel.size - 1 else wheel.index - 1
-        wheel.update()
+        wheel.turn if wheel.index == 0 then wheel.size - 1 else wheel.index - 1
         if repeat_timeout == 0
           repeat_timeout = new Date().getTime() + 1000
         return
       if Key.pressed(Key.DOWN)
-        wheel.index = if wheel.index == wheel.size - 1 then 0 else wheel.index + 1
-        wheel.update()
+        wheel.turn if wheel.index == wheel.size - 1 then 0 else wheel.index + 1
         if repeat_timeout == 0
           repeat_timeout = new Date().getTime() + 1000
         return
@@ -72,12 +70,23 @@ class App
     @window = gui.Window.get()
 
     # load config
-    @config = yaml.safeLoad(fs.readFileSync("config/config.yml", "utf8"))
+    try
+      @config = yaml.safeLoad(fs.readFileSync("config/config.yml", "utf8"))
+    catch
+      @alert "Couldn't find a configuration", ->
+        gui.App.quit()
 
     # set initial app context
     @context = "wheel"
 
     @events()
+
+  alert: (msg, callback = false)->
+    $("body").append "<div id='alert' class='modal'>#{msg}</div>"
+    setTimeout ->
+      $("#alert").remove()
+      callback() if callback
+    , 2000
 
   events: ->
     $("#exit-dialog").on "click", ".yes", (e)->
@@ -183,7 +192,17 @@ class Wheel
       app.window.show()
       app.window.focus()
       unless err is null
-        console.log "exec error: #{err}"
+        app.alert "#{err}"
+
+  turn: (index) ->
+    @index = index
+    @update()
+    sound_id = Math.floor(Math.random() * 124) + 1
+    @wheel_sound.unload() if @wheel_sound
+    @wheel_sound = new Howl
+      urls: ["sounds/wheels/GS#{sound_id}.ogg"]
+      autoplay: true
+      loop: false
 
   update_theme: =>
     bg = @list[@index].background || "img/Background.png"

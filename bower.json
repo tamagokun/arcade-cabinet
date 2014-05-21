@@ -9,8 +9,12 @@
   "dependencies": {
     "console-polyfill": "~0.1.0",
     "jquery": "~2.0.3",
-    "components-underscore": "~1.5.2"
+    "components-underscore": "~1.5.2",
+    "howler": "*"
   },
   "overrides": {
+    "howler": {
+      "main": "howler.js"
+    }
   }
 }
