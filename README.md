@@ -3,6 +3,8 @@ HyperMike
 
 Frontend for my arcade cabinet
 
+![Screenshot](screenshot.png)
+
 Getting Started
 ---------------
 
