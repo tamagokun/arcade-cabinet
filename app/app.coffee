@@ -19,6 +19,7 @@ jQuery(document).ready ($) ->
 
   # go, go go
   app = new App
+  app.load_known_games()
   wheel = new Wheel $("ul"), app.games
 
   $(window).on 'keydown', (e) -> Key.on_down(e)
@@ -72,7 +73,6 @@ class App
 
     # load config
     @config = yaml.safeLoad(fs.readFileSync("config/config.yml", "utf8"))
-    @load_known_games()
 
     # set initial app context
     @context = "wheel"
@@ -118,19 +118,17 @@ class Game
 
   locate_assets: ->
     dir = "themes/#{@name}"
-    @wheel = @path_if_exists "#{dir}/#{@game}.png"
+    @wheel = @path_if_exists "#{dir}/#{@name}.png"
     @background = @path_if_exists "#{dir}/Background.png"
     @artwork = @path_if_exists "#{dir}/Theme.xml"
     @animations = {}
 
-    # TODO: Load animations
-    # if window.app.config.animations && @artwork
-    #   console.log "going to parse"
-    #   parseString fs.readFileSync("#{dir}/Theme.xml", "utf8"), (err, res) ->
-    #     console.log res
-    #      _.each res.theme, (artwork) ->
-    #        if artwork.name =~ /artwork/
-    #          assets.animations[artwork.name] = artwork.$
+    if app.config.animations && @artwork
+      parseString fs.readFileSync(@artwork, "utf8"), (err, res) =>
+        return unless res
+        _.each res.Theme, (artwork, name) =>
+          if /artwork/.test name
+            @animations[name] = artwork[0].$
 
 
 class Wheel
@@ -176,10 +174,8 @@ class Wheel
       when "win32"
         "#{app.config.launcher.win32} #{game}"
       when "darwin"
-        # || osascript -e 'tell application "" to activate'
         "\"#{app.config.launcher.mac}\" -Game \"#{game}\" -FullScreen YES"
       when "linux"
-        # || wmctrl -a application
         "\"#{app.config.launcher.linux}\" \"#{game}\""
 
     exec cmd, (err, stdout, stderr) =>
