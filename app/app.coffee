@@ -126,7 +126,7 @@ class Game
     false
 
   locate_assets: ->
-    dir = "themes/#{@name}"
+    dir = "#{app.config.themes}/#{@name}"
     @wheel = @path_if_exists "#{dir}/#{@name}.png"
     @background = @path_if_exists "#{dir}/Background.png"
     @artwork = @path_if_exists "#{dir}/Theme.xml"

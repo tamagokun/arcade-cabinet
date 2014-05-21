@@ -10,3 +10,4 @@ dist/*
 _public
 app/assets/themes/*
 !app/assets/themes/README.md
+app/assets/config/config.yml

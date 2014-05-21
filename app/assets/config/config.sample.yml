@@ -2,4 +2,6 @@ database: MAME.xml
 launcher:
   mac: /Applications/MAME OS X.app/Contents/MacOS/MAME OS X
   linux: /usr/games/mame
+  win32: mame.exe
+themes: themes
 animations: true
