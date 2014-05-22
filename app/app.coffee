@@ -197,12 +197,13 @@ class Wheel
   turn: (index) ->
     @index = index
     @update()
-    sound_id = Math.floor(Math.random() * 124) + 1
-    @wheel_sound.unload() if @wheel_sound
-    @wheel_sound = new Howl
-      urls: ["sounds/wheels/GS#{sound_id}.ogg"]
-      autoplay: true
-      loop: false
+    if app.config.sounds
+      sound_id = Math.floor(Math.random() * 124) + 1
+      @wheel_sound.unload() if @wheel_sound
+      @wheel_sound = new Howl
+        urls: ["sounds/wheels/GS#{sound_id}.ogg"]
+        autoplay: true
+        loop: false
 
   update_theme: =>
     bg = @list[@index].background || "img/Background.png"

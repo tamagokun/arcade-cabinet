@@ -5,3 +5,4 @@ launcher:
   win32: mame.exe
 themes: themes
 animations: true
+sounds: true
