@@ -58,6 +58,7 @@ Look for the release in `dist/releases`
 Things that would be cool
 -------------
 
+* Re-build UI with Phaser for better performance
 * Add support for animated backgrounds
 * Add support for game previews/videos
 * Instructions at bottom of screen
