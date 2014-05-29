@@ -97,9 +97,9 @@ class App
           when "win32"
             "shutdown -s"
           when "darwin"
-            "shutdown now"
+            "osascript -e 'tell app \"System Events\" to shut down'"
           when "linux"
-            "shutdown now"
+            "/sbin/poweroff"
       exec cmd
 
     $("#exit-dialog").on "click", ".no", (e) =>
