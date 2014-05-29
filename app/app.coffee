@@ -92,7 +92,15 @@ class App
     $("#exit-dialog").on "click", ".yes", (e)->
       e.preventDefault()
       gui.App.quit()
-      # TODO: Shutdown computer if configured as such
+      if config.shutdown_on_exit
+        cmd = switch process.platform
+          when "win32"
+            "shutdown -s"
+          when "darwin"
+            "shutdown now"
+          when "linux"
+            "shutdown now"
+      exec cmd
 
     $("#exit-dialog").on "click", ".no", (e) =>
       e.preventDefault()
