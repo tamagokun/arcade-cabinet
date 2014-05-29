@@ -112,7 +112,7 @@
 		<year>1989</year>
 		<genre>Fighter</genre>
 	</game>
-	<game name="frogger" index="" image="">
+	<game name="frog" index="" image="">
 		<description>Frogger</description>
 		<cloneof></cloneof>
 		<crc>597696d6</crc>
@@ -608,7 +608,7 @@
 		<year>1996</year>
 		<genre>Sports/Hockey</genre>
 	</game>
-	<game name="xmen2p" index="" image="">
+	<game name="xmen2pa" index="" image="">
 		<description>X-Men</description>
 		<cloneof></cloneof>
 		<crc>f896c93b</crc>
