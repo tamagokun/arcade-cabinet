@@ -8,6 +8,14 @@
 		<year>1995</year>
 		<genre>Sports/Hockey</genre>
 	</game>
+	<game name="baddudes" index="" image="">
+		<description>Bad Dudes vs. Dragonninja</description>
+		<cloneof></cloneof>
+		<crc>4bf158a7</crc>
+		<manufacturer>Data East USA</manufacturer>
+		<year>1988</year>
+		<genre>Platform</genre>
+	</game>
 	<game name="btoads" index="" image="">
 		<description>Battle Toads</description>
 		<cloneof></cloneof>
@@ -15,6 +23,14 @@
 		<manufacturer>Rare</manufacturer>
 		<year>1994</year>
 		<genre>Fighter</genre>
+	</game>
+	<game name="bbmanw" index="" image="">
+		<description>Bomber Man World / New Dyna Blaster - Global Quest</description>
+		<cloneof></cloneof>
+		<crc>567d3709</crc>
+		<manufacturer>Irem</manufacturer>
+		<year>1992</year>
+		<genre>Maze</genre>
 	</game>
 	<game name="bublbobl" index="" image="">
 		<description>Bubble Bobble</description>
@@ -55,6 +71,14 @@
 		<manufacturer>Namco</manufacturer>
 		<year>1985</year>
 		<genre>Maze</genre>
+	</game>
+	<game name="ddonpach" index="" image="">
+		<description>DoDonPachi</description>
+		<cloneof></cloneof>
+		<crc>b5cdc8d3</crc>
+		<manufacturer>Atlus/Cave</manufacturer>
+		<year>1997</year>
+		<genre>Shooter/Flying</genre>
 	</game>
 	<game name="dkong" index="" image="">
 		<description>Donkey Kong</description>
@@ -112,7 +136,7 @@
 		<year>1989</year>
 		<genre>Fighter</genre>
 	</game>
-	<game name="frog" index="" image="">
+	<game name="froggers1" index="" image="">
 		<description>Frogger</description>
 		<cloneof></cloneof>
 		<crc>597696d6</crc>
@@ -214,6 +238,14 @@
 		<crc>08b0d5bd</crc>
 		<manufacturer>Williams</manufacturer>
 		<year>1986</year>
+		<genre>Platform</genre>
+	</game>
+	<game name="msword" index="" image="">
+		<description>Magic Sword - Heroic Fantasy</description>
+		<cloneof></cloneof>
+		<crc>03fc8dbc</crc>
+		<manufacturer>Capcom</manufacturer>
+		<year>1990</year>
 		<genre>Platform</genre>
 	</game>
 	<game name="mario" index="" image="">
@@ -384,12 +416,28 @@
 		<year>1985</year>
 		<genre>Platform</genre>
 	</game>
+	<game name="primrage" index="" image="">
+		<description>Primal Rage</description>
+		<cloneof></cloneof>
+		<crc>35c9c34b</crc>
+		<manufacturer>Atari Games</manufacturer>
+		<year>1994</year>
+		<genre>Fighter</genre>
+	</game>
 	<game name="puyosun" index="" image="">
 		<description>Puyo Puyo Sun</description>
 		<cloneof></cloneof>
 		<crc>59ed40f4</crc>
 		<manufacturer>Compile</manufacturer>
 		<year>1996</year>
+		<genre>Puzzle</genre>
+	</game>
+	<game name="pbobble4" index="" image="">
+		<description>Puzzle Bobble 4</description>
+		<cloneof></cloneof>
+		<crc>fffea203</crc>
+		<manufacturer>Taito Corporation</manufacturer>
+		<year>1997</year>
 		<genre>Puzzle</genre>
 	</game>
 	<game name="rtype" index="" image="">
@@ -624,53 +672,4 @@
 		<year>1996</year>
 		<genre>Fighter</genre>
 	</game>
-<game name="baddudes" index="" image="">
-	<description>Bad Dudes vs. Dragonninja</description>
-	<cloneof></cloneof>
-	<crc>4bf158a7</crc>
-	<manufacturer>Data East USA</manufacturer>
-	<year>1988</year>
-	<genre>Platform</genre>
-</game>
-<game name="bbmanw" index="" image="">
-	<description>Bomber Man World / New Dyna Blaster - Global Quest</description>
-	<cloneof></cloneof>
-	<crc>567d3709</crc>
-	<manufacturer>Irem</manufacturer>
-	<year>1992</year>
-	<genre>Maze</genre>
-</game>
-<game name="ddonpach" index="" image="">
-	<description>DoDonPachi</description>
-	<cloneof></cloneof>
-	<crc>b5cdc8d3</crc>
-	<manufacturer>Atlus/Cave</manufacturer>
-	<year>1997</year>
-	<genre>Shooter/Flying</genre>
-</game>
-<game name="msword" index="" image="">
-	<description>Magic Sword - Heroic Fantasy</description>
-	<cloneof></cloneof>
-	<crc>03fc8dbc</crc>
-	<manufacturer>Capcom</manufacturer>
-	<year>1990</year>
-	<genre>Platform</genre>
-</game>
-<game name="primrage" index="" image="">
-	<description>Primal Rage</description>
-	<cloneof></cloneof>
-	<crc>35c9c34b</crc>
-	<manufacturer>Atari Games</manufacturer>
-	<year>1994</year>
-	<genre>Fighter</genre>
-</game>
-<game name="pbobble4" index="" image="">
-	<description>Puzzle Bobble 4</description>
-	<cloneof></cloneof>
-	<crc>fffea203</crc>
-	<manufacturer>Taito Corporation</manufacturer>
-	<year>1997</year>
-	<genre>Puzzle</genre>
-</game>
-
 </menu>
