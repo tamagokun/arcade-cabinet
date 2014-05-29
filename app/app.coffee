@@ -197,6 +197,7 @@ class Wheel
 
     exec cmd, (err, stdout, stderr) =>
       @in_game = false
+      Key.clear()
       app.window.show()
       app.window.focus()
       unless err is null
@@ -251,3 +252,5 @@ class Key
     Key.pressing[event.keyCode] = true
   @on_up: (event) ->
     delete Key.pressing[event.keyCode]
+  @clear: ->
+    Key.pressing = {}
