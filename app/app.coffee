@@ -220,7 +220,7 @@ class Wheel
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)
 
   update: ->
-    window.scrollTo(0, (@index + @page_size + 1) * @height - (document.documentElement.clientHeight*.5) + (@height*2))
+    window.scrollTo(0, (@index + @page_size + 1) * @height - (document.documentElement.clientHeight*.5) + @height + 35)
     @view.scroll_update()
     $("li",@ul).removeClass("active")
     active = $("#g-#{@index}")

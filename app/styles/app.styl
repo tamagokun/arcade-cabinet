@@ -42,17 +42,26 @@ ul
     transition: all .05s ease-in-out;
 
     img
-      max-height: 75px;
-      vertical-align: middle;
+      max-height: 75px
+      position: relative
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      transform: translateY(-50%)
 
     &.active
       height: 100px;
-      padding: 85px 0;
-      margin-bottom: 40px;
+      margin: 60px 0
       font-size: 100px;
       z-index: 99999;
       img
         max-height: 500px;
+
+@media all and (max-width: 640px)
+  ul li
+    font-size: 40px
+    &.active
+      font-size: 60px
+
 
 #pointer
   background: url(../img/Pointer.png) no-repeat right 50%;
