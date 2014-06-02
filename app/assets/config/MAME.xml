@@ -168,6 +168,14 @@
 		<year>1988</year>
 		<genre>Platform</genre>
 	</game>
+	<game name="gradius3" index="" image="">
+		<description>Gradius III</description>
+		<cloneof></cloneof>
+		<crc>70c240a2</crc>
+		<manufacturer>Konami</manufacturer>
+		<year>1989</year>
+		<genre>Shooter</genre>
+	</game>
 	<game name="guwange" index="" image="">
 		<description>Guwange</description>
 		<cloneof></cloneof>
@@ -294,6 +302,14 @@
 		<crc>c10370fa</crc>
 		<manufacturer>Namco</manufacturer>
 		<year>1987</year>
+		<genre>Maze</genre>
+	</game>
+	<game name="pengo" index="" image="">
+		<description>Pengo</description>
+		<cloneof></cloneof>
+		<crc>f37066a8</crc>
+		<manufacturer>Sega</manufacturer>
+		<year>1982</year>
 		<genre>Maze</genre>
 	</game>
 	<game name="pitfall2" index="" image="">
