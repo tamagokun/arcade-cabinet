@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <menu>
-	<game name="openice" index="true" image="2">
-		<description>2 On 2 Open Ice Challenge</description>
-		<cloneof></cloneof>
-		<crc>8adb5aab</crc>
-		<manufacturer>Midway</manufacturer>
-		<year>1995</year>
-		<genre>Sports/Hockey</genre>
-	</game>
 	<game name="baddudes" index="" image="">
 		<description>Bad Dudes vs. Dragonninja</description>
 		<cloneof></cloneof>
@@ -128,14 +120,6 @@
 		<year>1998</year>
 		<genre>Shooter/Flying</genre>
 	</game>
-	<game name="ffight" index="" image="">
-		<description>Final Fight</description>
-		<cloneof></cloneof>
-		<crc>f9a5ce83</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>1989</year>
-		<genre>Fighter</genre>
-	</game>
 	<game name="froggers1" index="" image="">
 		<description>Frogger</description>
 		<cloneof></cloneof>
@@ -184,30 +168,6 @@
 		<year>1988</year>
 		<genre>Platform</genre>
 	</game>
-	<game name="goldnaxe" index="" image="">
-		<description>Golden Axe</description>
-		<cloneof></cloneof>
-		<crc>a97c4e4d</crc>
-		<manufacturer>Sega</manufacturer>
-		<year>1989</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="mp_gaxe2" index="" image="">
-		<description>Golden Axe II</description>
-		<cloneof></cloneof>
-		<crc>aa8dc2d8</crc>
-		<manufacturer>Sega</manufacturer>
-		<year>1993</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="gradius3" index="" image="">
-		<description>Gradius III</description>
-		<cloneof></cloneof>
-		<crc>70c240a2</crc>
-		<manufacturer>Konami</manufacturer>
-		<year>1989</year>
-		<genre>Shooter/Flying</genre>
-	</game>
 	<game name="guwange" index="" image="">
 		<description>Guwange</description>
 		<cloneof></cloneof>
@@ -215,14 +175,6 @@
 		<manufacturer>Atlus/Cave</manufacturer>
 		<year>1999</year>
 		<genre>Shooter</genre>
-	</game>
-	<game name="hsf2" index="" image="">
-		<description>Hyper Street Fighter 2: The Anniversary Edition</description>
-		<cloneof></cloneof>
-		<crc>b308151e</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>2004</year>
-		<genre>Fighter</genre>
 	</game>
 	<game name="joust" index="" image="">
 		<description>Joust</description>
@@ -248,14 +200,6 @@
 		<year>1990</year>
 		<genre>Platform</genre>
 	</game>
-	<game name="mario" index="" image="">
-		<description>Mario Bros.</description>
-		<cloneof></cloneof>
-		<crc>c0c6e014</crc>
-		<manufacturer>Nintendo of America</manufacturer>
-		<year>1983</year>
-		<genre>Platform</genre>
-	</game>
 	<game name="mshvsf" index="" image="">
 		<description>Marvel Super Heroes Vs. Street Fighter</description>
 		<cloneof></cloneof>
@@ -270,14 +214,6 @@
 		<crc>824e4a90</crc>
 		<manufacturer>Capcom</manufacturer>
 		<year>1998</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="megaman" index="" image="">
-		<description>Mega Man - The Power Battle</description>
-		<cloneof></cloneof>
-		<crc>61e4a397</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>1995</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="megaman2" index="" image="">
@@ -304,38 +240,6 @@
 		<year>1998</year>
 		<genre>Platform</genre>
 	</game>
-	<game name="mslug3" index="" image="">
-		<description>Metal Slug 3</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>SNK</manufacturer>
-		<year>2000</year>
-		<genre>Platform</genre>
-	</game>
-	<game name="mslug4" index="" image="">
-		<description>Metal Slug 4</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>Mega / Playmore</manufacturer>
-		<year>2002</year>
-		<genre>Platform</genre>
-	</game>
-	<game name="mslug5" index="" image="">
-		<description>Metal Slug 5</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>SNK Playmore</manufacturer>
-		<year>2003</year>
-		<genre>Platform</genre>
-	</game>
-	<game name="mslugx" index="" image="">
-		<description>Metal Slug X - Super Vehicle-001</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>SNK</manufacturer>
-		<year>1999</year>
-		<genre>Platform</genre>
-	</game>
 	<game name="mk" index="" image="">
 		<description>Mortal Kombat</description>
 		<cloneof></cloneof>
@@ -350,14 +254,6 @@
 		<crc>5f23d71d</crc>
 		<manufacturer>Midway</manufacturer>
 		<year>1993</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="mk3" index="" image="">
-		<description>Mortal Kombat 3</description>
-		<cloneof></cloneof>
-		<crc>5273436f</crc>
-		<manufacturer>Midway</manufacturer>
-		<year>1994</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="mrdrillr" index="" image="">
@@ -400,14 +296,6 @@
 		<year>1987</year>
 		<genre>Maze</genre>
 	</game>
-	<game name="paperboy" index="" image="">
-		<description>Paperboy</description>
-		<cloneof></cloneof>
-		<crc>4024bb9b</crc>
-		<manufacturer>Atari Games</manufacturer>
-		<year>1984</year>
-		<genre>Miscellaneous</genre>
-	</game>
 	<game name="pitfall2" index="" image="">
 		<description>Pitfall II</description>
 		<cloneof></cloneof>
@@ -415,14 +303,6 @@
 		<manufacturer>Sega</manufacturer>
 		<year>1985</year>
 		<genre>Platform</genre>
-	</game>
-	<game name="primrage" index="" image="">
-		<description>Primal Rage</description>
-		<cloneof></cloneof>
-		<crc>35c9c34b</crc>
-		<manufacturer>Atari Games</manufacturer>
-		<year>1994</year>
-		<genre>Fighter</genre>
 	</game>
 	<game name="puyosun" index="" image="">
 		<description>Puyo Puyo Sun</description>
@@ -464,36 +344,12 @@
 		<year>1992</year>
 		<genre>Shooter/Flying</genre>
 	</game>
-	<game name="samsho" index="" image="">
-		<description>Samurai Shodown / Samurai Spirits</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>SNK</manufacturer>
-		<year>1993</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="samsho2" index="" image="">
-		<description>Samurai Shodown II / Shin Samurai Spirits - Haohmaru jigokuhen</description>
-		<cloneof></cloneof>
-		<crc>9036d879</crc>
-		<manufacturer>SNK</manufacturer>
-		<year>1994</year>
-		<genre>Fighter</genre>
-	</game>
 	<game name="samsho3" index="" image="">
 		<description>Samurai Shodown III / Samurai Spirits - Zankurou Musouken</description>
 		<cloneof></cloneof>
 		<crc>9036d879</crc>
 		<manufacturer>SNK</manufacturer>
 		<year>1995</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="splatter" index="" image="">
-		<description>Splatter House</description>
-		<cloneof></cloneof>
-		<crc>03b47a5c</crc>
-		<manufacturer>Namco</manufacturer>
-		<year>1988</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="sfa2" index="" image="">
@@ -518,14 +374,6 @@
 		<crc>ebf2054d</crc>
 		<manufacturer>Capcom</manufacturer>
 		<year>1995</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="sf2" index="" image="">
-		<description>Street Fighter II - The World Warrior</description>
-		<cloneof></cloneof>
-		<crc>fe39ee33</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>1991</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="sf2ce" index="" image="">
@@ -575,14 +423,6 @@
 		<manufacturer>Taito</manufacturer>
 		<year>1999</year>
 		<genre>Puzzle</genre>
-	</game>
-	<game name="tekken" index="" image="">
-		<description>Tekken</description>
-		<cloneof></cloneof>
-		<crc>7ecb7892</crc>
-		<manufacturer>Namco</manufacturer>
-		<year>1994</year>
-		<genre>Fighter</genre>
 	</game>
 	<game name="tmnt" index="" image="">
 		<description>Teenage Mutant Ninja Turtles</description>
@@ -639,22 +479,6 @@
 		<manufacturer>Konami</manufacturer>
 		<year>1991</year>
 		<genre>Fighter</genre>
-	</game>
-	<game name="vf" index="" image="">
-		<description>Virtua Fighter</description>
-		<cloneof></cloneof>
-		<crc>b23f22ee</crc>
-		<manufacturer>Sega</manufacturer>
-		<year>1993</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="wg3dh" index="" image="">
-		<description>Wayne Gretzky's 3D Hockey</description>
-		<cloneof></cloneof>
-		<crc>15e4cea2</crc>
-		<manufacturer>Atari Games</manufacturer>
-		<year>1996</year>
-		<genre>Sports/Hockey</genre>
 	</game>
 	<game name="xmen2pa" index="" image="">
 		<description>X-Men</description>
