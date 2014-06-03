@@ -57,7 +57,7 @@ jQuery(document).ready ($) ->
           repeat_timeout = new Date().getTime() + 1000
         return
       if Key.pressed(Key.ENTER) || Key.pressed(Key.P1START) || Key.pressed(Key.P2START)
-        wheel.run()
+        wheel.run() if !wheel.in_game
         return
       if Key.pressed(Key.ESCAPE)
         app.exit_dialog()
@@ -213,6 +213,7 @@ class Wheel
         urls: ["sounds/wheels/GS#{sound_id}.ogg"]
         autoplay: true
         loop: false
+        volume: 0.75
 
   update_theme: =>
     bg = @list[@index].background || "img/Background.png"

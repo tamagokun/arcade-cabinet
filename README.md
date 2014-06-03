@@ -55,6 +55,14 @@ $ npm run deploy
 ```
 Look for the release in `dist/releases`
 
+### Single command update and build
+
+I need to easily be able to grab the latest updates from this app and build a release on my arcade cabinet without having to run a bunch of commands. For this there is a special script to do so:
+
+```bash
+$ scripts/sync.sh
+```
+
 Things that would be cool
 -------------
 
