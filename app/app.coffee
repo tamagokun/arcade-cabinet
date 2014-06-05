@@ -216,7 +216,7 @@ class Wheel
         volume: 0.75
 
   update_theme: =>
-    bg = @list[@index].background || "img/Background.png"
+    bg = @list[@index]?.background || "img/Background.png"
     $("body").css backgroundImage: "url(#{bg})"
     #$("#title").fadeOut 200, ->
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)
