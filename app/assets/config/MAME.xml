@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <menu>
+	<game name="asteroid" index="" image="">
+		<description>Asteroids</description>
+		<cloneof></cloneof>
+		<crc>b503eaf7</crc>
+		<manufacturer>Atari</manufacturer>
+		<year>1979</year>
+		<genre>Shooter</genre>
+	</game>
 	<game name="baddudes" index="" image="">
 		<description>Bad Dudes vs. Dragonninja</description>
 		<cloneof></cloneof>
@@ -32,6 +40,14 @@
 		<year>1986</year>
 		<genre>Platform</genre>
 	</game>
+	<game name="btimem" index="" image="">
+		<description>Burger Time</description>
+		<cloneof>btime</cloneof>
+		<crc>0a98b230</crc>
+		<manufacturer>Data East (Bally Midway license)</manufacturer>
+		<year>1982</year>
+		<genre>Platform</genre>
+	</game>
 	<game name="captaven" index="" image="">
 		<description>Captain America and The Avengers</description>
 		<cloneof></cloneof>
@@ -47,6 +63,14 @@
 		<manufacturer>Atari</manufacturer>
 		<year>1980</year>
 		<genre>Shooter</genre>
+	</game>
+	<game name="contra" index="" image="">
+		<description>Contra</description>
+		<cloneof></cloneof>
+		<crc>d045e1da</crc>
+		<manufacturer>Konami</manufacturer>
+		<year>1987</year>
+		<genre>Platform</genre>
 	</game>
 	<game name="digdug" index="" image="">
 		<description>Dig Dug</description>
@@ -200,6 +224,14 @@
 		<year>1986</year>
 		<genre>Platform</genre>
 	</game>
+	<game name="jrpacman" index="" image="">
+		<description>Jr. Pac-Man</description>
+		<cloneof></cloneof>
+		<crc>e3fa972e</crc>
+		<manufacturer>Bally Midway</manufacturer>
+		<year>1983</year>
+		<genre>Maze</genre>
+	</game>
 	<game name="msword" index="" image="">
 		<description>Magic Sword - Heroic Fantasy</description>
 		<cloneof></cloneof>
@@ -263,6 +295,14 @@
 		<manufacturer>Midway</manufacturer>
 		<year>1993</year>
 		<genre>Fighter</genre>
+	</game>
+	<game name="mrdo" index="" image="">
+		<description>Mr. Do!</description>
+		<cloneof></cloneof>
+		<crc>03dcfba2</crc>
+		<manufacturer>Universal</manufacturer>
+		<year>1982</year>
+		<genre>Maze</genre>
 	</game>
 	<game name="mrdrillr" index="" image="">
 		<description>Mr. Driller</description>
@@ -336,28 +376,28 @@
 		<year>1997</year>
 		<genre>Puzzle</genre>
 	</game>
+	<game name="raiden" index="" image="">
+		<description>Raiden</description>
+		<cloneof></cloneof>
+		<crc>a4b12785</crc>
+		<manufacturer>Seibu Kaihatsu</manufacturer>
+		<year>1990</year>
+		<genre>Shooter</genre>
+	</game>
+	<game name="raidndxu" index="" image="">
+		<description>Raiden DX</description>
+		<cloneof></cloneof>
+		<crc>7624c36b</crc>
+		<manufacturer>Seibu Kaihatsu</manufacturer>
+		<year>1993</year>
+		<genre>Shooter</genre>
+	</game>
 	<game name="rtype" index="" image="">
 		<description>R-Type</description>
 		<cloneof></cloneof>
 		<crc>591c7754</crc>
 		<manufacturer>Irem</manufacturer>
 		<year>1987</year>
-		<genre>Shooter/Flying</genre>
-	</game>
-	<game name="rtype2" index="" image="">
-		<description>R-Type II</description>
-		<cloneof></cloneof>
-		<crc>d8ece6f4</crc>
-		<manufacturer>Irem</manufacturer>
-		<year>1989</year>
-		<genre>Shooter/Flying</genre>
-	</game>
-	<game name="rtypeleo" index="" image="">
-		<description>R-Type Leo</description>
-		<cloneof></cloneof>
-		<crc>5fef7fa1</crc>
-		<manufacturer>Irem</manufacturer>
-		<year>1992</year>
 		<genre>Shooter/Flying</genre>
 	</game>
 	<game name="samsho3" index="" image="">
@@ -367,6 +407,14 @@
 		<manufacturer>SNK</manufacturer>
 		<year>1995</year>
 		<genre>Fighter</genre>
+	</game>
+	<game name="spaceinv" index="" image="">
+		<description>Space Invaders</description>
+		<cloneof></cloneof>
+		<crc>184314d2</crc>
+		<manufacturer>Shoei</manufacturer>
+		<year>1980</year>
+		<genre>Shooter</genre>
 	</game>
 	<game name="sfa2" index="" image="">
 		<description>Street Fighter Alpha 2</description>
@@ -432,6 +480,14 @@
 		<year>1988</year>
 		<genre>Platform</genre>
 	</game>
+	<game name="superpac" index="" image="">
+		<description>Super Pac-Man</description>
+		<cloneof></cloneof>
+		<crc>4bb33d9c</crc>
+		<manufacturer>Namco</manufacturer>
+		<year>1982</year>
+		<genre>Maze</genre>
+	</game>
 	<game name="spuzbobl" index="" image="">
 		<description>Super Puzzle Bobble</description>
 		<cloneof></cloneof>
@@ -480,7 +536,7 @@
 		<year>1985</year>
 		<genre>Shooter/Flying</genre>
 	</game>
-	<game name="kod" index="" image="">
+	<game name="kodu" index="" image="">
 		<description>The King of Dragons</description>
 		<cloneof></cloneof>
 		<crc>c7414fd4</crc>
@@ -488,7 +544,7 @@
 		<year>1991</year>
 		<genre>Fighter</genre>
 	</game>
-	<game name="simpsons" index="" image="">
+	<game name="simpsons2p" index="" image="">
 		<description>The Simpsons</description>
 		<cloneof></cloneof>
 		<crc>580ce1d6</crc>
