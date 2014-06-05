@@ -156,7 +156,7 @@ class Wheel
           $ref = $(this)
           $ref.attr('src', $ref.attr('data-original'))
       SCROLL_THROTTLE: 1
-    @index = @list.length / 2
+    @index = Math.ceil @list.length / 2
     @page = 1
     @offset = 0
     @size = @list.length
@@ -216,7 +216,7 @@ class Wheel
         volume: 0.75
 
   update_theme: =>
-    bg = @list[@index]?.background || "img/Background.png"
+    bg = @list[@index].background || "img/Background.png"
     $("body").css backgroundImage: "url(#{bg})"
     #$("#title").fadeOut 200, ->
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)
