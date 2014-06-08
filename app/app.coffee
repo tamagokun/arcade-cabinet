@@ -213,7 +213,7 @@ class Wheel
         urls: ["sounds/wheels/GS#{sound_id}.ogg"]
         autoplay: true
         loop: false
-        volume: 0.75
+        volume: 0.5
 
   update_theme: =>
     bg = @list[@index].background || "img/Background.png"
