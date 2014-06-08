@@ -296,14 +296,6 @@
 		<year>1980</year>
 		<genre>Maze</genre>
 	</game>
-	<game name="pacmania" index="" image="">
-		<description>Pac-Mania</description>
-		<cloneof></cloneof>
-		<crc>c10370fa</crc>
-		<manufacturer>Namco</manufacturer>
-		<year>1987</year>
-		<genre>Maze</genre>
-	</game>
 	<game name="pengo" index="" image="">
 		<description>Pengo</description>
 		<cloneof></cloneof>
