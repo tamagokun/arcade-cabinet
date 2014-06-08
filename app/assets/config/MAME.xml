@@ -336,6 +336,14 @@
 		<year>1990</year>
 		<genre>Shooter</genre>
 	</game>
+	<game name="raiden2" index="" image="">
+		<description>Raiden 2</description>
+		<cloneof></cloneof>
+		<crc>09475ec4</crc>
+		<manufacturer>Seibu Kaihatsu</manufacturer>
+		<year>1993</year>
+		<genre>Shooter</genre>
+	</game>
 	<game name="rtype" index="" image="">
 		<description>R-Type</description>
 		<cloneof></cloneof>
