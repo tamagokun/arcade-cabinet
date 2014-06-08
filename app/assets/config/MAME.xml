@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <menu>
-	<game name="asteroid" index="" image="">
-		<description>Asteroids</description>
-		<cloneof></cloneof>
-		<crc>b503eaf7</crc>
-		<manufacturer>Atari</manufacturer>
-		<year>1979</year>
-		<genre>Shooter</genre>
-	</game>
 	<game name="baddudes" index="" image="">
 		<description>Bad Dudes vs. Dragonninja</description>
 		<cloneof></cloneof>
@@ -40,7 +32,7 @@
 		<year>1986</year>
 		<genre>Platform</genre>
 	</game>
-	<game name="btimem" index="" image="">
+	<game name="btime" index="" image="">
 		<description>Burger Time</description>
 		<cloneof>btime</cloneof>
 		<crc>0a98b230</crc>
@@ -88,14 +80,6 @@
 		<year>1985</year>
 		<genre>Maze</genre>
 	</game>
-	<game name="ddonpach" index="" image="">
-		<description>DoDonPachi</description>
-		<cloneof></cloneof>
-		<crc>b5cdc8d3</crc>
-		<manufacturer>Atlus/Cave</manufacturer>
-		<year>1997</year>
-		<genre>Shooter/Flying</genre>
-	</game>
 	<game name="dkong" index="" image="">
 		<description>Donkey Kong</description>
 		<cloneof></cloneof>
@@ -135,14 +119,6 @@
 		<manufacturer>Technos Japan</manufacturer>
 		<year>1988</year>
 		<genre>Fighter</genre>
-	</game>
-	<game name="esprade" index="" image="">
-		<description>ESP Ra.De.</description>
-		<cloneof></cloneof>
-		<crc>3b510a73</crc>
-		<manufacturer>Atlus/Cave</manufacturer>
-		<year>1998</year>
-		<genre>Shooter/Flying</genre>
 	</game>
 	<game name="froggers1" index="" image="">
 		<description>Frogger</description>
@@ -224,14 +200,6 @@
 		<year>1986</year>
 		<genre>Platform</genre>
 	</game>
-	<game name="jrpacman" index="" image="">
-		<description>Jr. Pac-Man</description>
-		<cloneof></cloneof>
-		<crc>e3fa972e</crc>
-		<manufacturer>Bally Midway</manufacturer>
-		<year>1983</year>
-		<genre>Maze</genre>
-	</game>
 	<game name="msword" index="" image="">
 		<description>Magic Sword - Heroic Fantasy</description>
 		<cloneof></cloneof>
@@ -254,14 +222,6 @@
 		<crc>824e4a90</crc>
 		<manufacturer>Capcom</manufacturer>
 		<year>1998</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="megaman2" index="" image="">
-		<description>Mega Man 2: The Power Fighters</description>
-		<cloneof></cloneof>
-		<crc>8ffc2cd1</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>1996</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="mslug" index="" image="">
@@ -352,14 +312,6 @@
 		<year>1982</year>
 		<genre>Maze</genre>
 	</game>
-	<game name="pitfall2" index="" image="">
-		<description>Pitfall II</description>
-		<cloneof></cloneof>
-		<crc>bcc8406b</crc>
-		<manufacturer>Sega</manufacturer>
-		<year>1985</year>
-		<genre>Platform</genre>
-	</game>
 	<game name="puyosun" index="" image="">
 		<description>Puyo Puyo Sun</description>
 		<cloneof></cloneof>
@@ -382,14 +334,6 @@
 		<crc>a4b12785</crc>
 		<manufacturer>Seibu Kaihatsu</manufacturer>
 		<year>1990</year>
-		<genre>Shooter</genre>
-	</game>
-	<game name="raidndxu" index="" image="">
-		<description>Raiden DX</description>
-		<cloneof></cloneof>
-		<crc>7624c36b</crc>
-		<manufacturer>Seibu Kaihatsu</manufacturer>
-		<year>1993</year>
 		<genre>Shooter</genre>
 	</game>
 	<game name="rtype" index="" image="">
@@ -487,14 +431,6 @@
 		<manufacturer>Namco</manufacturer>
 		<year>1982</year>
 		<genre>Maze</genre>
-	</game>
-	<game name="spuzbobl" index="" image="">
-		<description>Super Puzzle Bobble</description>
-		<cloneof></cloneof>
-		<crc>c48c8236</crc>
-		<manufacturer>Taito</manufacturer>
-		<year>1999</year>
-		<genre>Puzzle</genre>
 	</game>
 	<game name="tmnt" index="" image="">
 		<description>Teenage Mutant Ninja Turtles</description>
