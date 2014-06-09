@@ -184,22 +184,6 @@
 		<year>1999</year>
 		<genre>Shooter</genre>
 	</game>
-	<game name="joust" index="" image="">
-		<description>Joust</description>
-		<cloneof></cloneof>
-		<crc>3f1c4f89</crc>
-		<manufacturer>Williams</manufacturer>
-		<year>1982</year>
-		<genre>Platform</genre>
-	</game>
-	<game name="joust2" index="" image="">
-		<description>Joust 2 - Survival of the Fittest</description>
-		<cloneof></cloneof>
-		<crc>08b0d5bd</crc>
-		<manufacturer>Williams</manufacturer>
-		<year>1986</year>
-		<genre>Platform</genre>
-	</game>
 	<game name="msword" index="" image="">
 		<description>Magic Sword - Heroic Fantasy</description>
 		<cloneof></cloneof>
