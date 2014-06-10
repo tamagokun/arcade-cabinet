@@ -336,7 +336,7 @@
 		<year>1995</year>
 		<genre>Fighter</genre>
 	</game>
-	<game name="spaceinv" index="" image="">
+	<game name="invad2ct" index="" image="">
 		<description>Space Invaders</description>
 		<cloneof></cloneof>
 		<crc>184314d2</crc>
@@ -358,14 +358,6 @@
 		<crc>9762b206</crc>
 		<manufacturer>Capcom</manufacturer>
 		<year>1998</year>
-		<genre>Fighter</genre>
-	</game>
-	<game name="sfa" index="" image="">
-		<description>Street Fighter Alpha: Warriors' Dreams</description>
-		<cloneof></cloneof>
-		<crc>ebf2054d</crc>
-		<manufacturer>Capcom</manufacturer>
-		<year>1995</year>
 		<genre>Fighter</genre>
 	</game>
 	<game name="sf2ce" index="" image="">
@@ -432,12 +424,12 @@
 		<year>1991</year>
 		<genre>Fighter</genre>
 	</game>
-	<game name="tetrisp" index="" image="">
-		<description>Tetris Plus</description>
-		<cloneof></cloneof>
-		<crc>d318a9ba</crc>
-		<manufacturer>Jaleco / BPS</manufacturer>
-		<year>1995</year>
+	<game name="atetrisc" index="" image="">
+		<description>Tetris</description>
+		<cloneof>atetris</cloneof>
+		<crc>9afd1f4a</crc>
+		<manufacturer>Atari Games</manufacturer>
+		<year>1989</year>
 		<genre>Puzzle</genre>
 	</game>
 	<game name="tetrisp2" index="" image="">
