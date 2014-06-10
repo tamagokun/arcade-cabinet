@@ -464,6 +464,14 @@
 		<year>1991</year>
 		<genre>Fighter</genre>
 	</game>
+	<game name="spidman" index="" image="">
+		<description>Spider-Man: The Videogame</description>
+		<cloneof></cloneof>
+		<crc>d900219c</crc>
+		<manufacturer>Sega</manufacturer>
+		<year>1991</year>
+		<genre>Platform</genre>
+	</game>
 	<game name="xmen2pa" index="" image="">
 		<description>X-Men</description>
 		<cloneof></cloneof>
