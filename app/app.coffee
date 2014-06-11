@@ -235,7 +235,7 @@ class Wheel
     window.scrollTo(0, (@index + @page_size + 1) * @height - (@window_height*.5) + @height + 35)
     switch app.config.cabinet
       when "cocktail"
-        $("ul").css top: -((@index + @page_size + 1) * @height) - (@window_height*.5) - @height - 25
+        $("ul").css top: -((@index + @page_size + 1) * @height) + (@window_height*.5) - @height - 25
     @view.scroll_update()
     $("li",@ul).removeClass("active")
     active = $("#g-#{@index}")
