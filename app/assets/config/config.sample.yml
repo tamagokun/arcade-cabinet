@@ -7,3 +7,4 @@ themes: themes
 animations: true
 sounds: true
 shutdown_on_exit: false
+cabinet: "upright"

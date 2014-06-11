@@ -79,6 +79,9 @@ class App
     # set initial app context
     @context = "wheel"
 
+    # set cabinet type for CSS
+    $("body").addClass @config.cabinet
+
     @events()
 
   alert: (msg, callback = false)->
@@ -161,7 +164,12 @@ class Wheel
     @offset = 0
     @size = @list.length
     @height = 75
-    @page_size = Math.ceil(document.documentElement.clientHeight / @height)
+    @window_height = switch app.config.cabinet
+      when "cocktail"
+        document.documentElement.clientWidth
+      else
+        document.documentElement.clientHeight
+    @page_size = Math.ceil @window_height / @height
     @in_game = false
     @bg_timeout = 0
     @init()
@@ -170,6 +178,8 @@ class Wheel
     @add i, true for i in [@size-@page_size-1..@size-1]
     @add i for i in [0..@size-1]
     @add i, true for i in [0..@page_size-1]
+    # set dom height for scrolling maths
+    $("html").height @size * @height
     @update()
 
   add: (index, padded=false) ->
@@ -222,7 +232,10 @@ class Wheel
       #$(this).css(backgroundImage: "url(#{title})").fadeIn(200)
 
   update: ->
-    window.scrollTo(0, (@index + @page_size + 1) * @height - (document.documentElement.clientHeight*.5) + @height + 35)
+    window.scrollTo(0, (@index + @page_size + 1) * @height - (@window_height*.5) + @height + 35)
+    switch app.config.cabinet
+      when "cocktail"
+        $("ul").css top: -((@index + @page_size + 1) * @height) - (@window_height*.5) - @height - 25
     @view.scroll_update()
     $("li",@ul).removeClass("active")
     active = $("#g-#{@index}")

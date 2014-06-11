@@ -21,9 +21,15 @@ body
   background-position: top right;
   background-repeat: no-repeat;
 
+#wheel
+  position: relative
+  z-index: 2
+  top: 30px
+
 ul
   margin-left: 50px;
   list-style: none;
+  position: relative;
 
   li
     z-index: 2;
@@ -50,7 +56,7 @@ ul
 
     &.active
       height: 100px;
-      margin: 60px 0
+      margin: 40px 0
       font-size: 100px;
       z-index: 99999;
       img
@@ -103,4 +109,23 @@ ul
     &.active
       padding: 7px
       border: 3px solid yellow
+
+.cocktail
+  #wheel
+    position: fixed;
+    top: 0
+    left: -25px
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+
+  #pointer
+    left: 0
+    top: 75px
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+  .modal
+    -webkit-transform: translateY(-50%) rotate(90deg)
+    transform: translateY(-50%) rotate(90deg)
+
 
